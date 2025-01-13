@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clever Inn - Automated Property Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Intro Section -->
+  <section id="intro" class="intro-section">
+    <div class="intro-content">
+      <h1>Welcome to Clever Inn</h1>
+      <p>The AI-driven platform that automates and streamlines property management for hosts.</p>
+      <button onclick="showDashboard()">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Main Dashboard (Hidden by Default) -->
+  <main id="dashboard" class="container" style="display: none;">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#reservations">Reservations</a></li>
+        <li><a href="#pricing">Pricing Optimization</a></li>
+        <li><a href="#cleaning">Cleaning Management</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="content">
+      <!-- Reservations Section -->
+      <div id="reservations" class="card">
+        <h2>Reservations</h2>
+        <p>Upcoming reservations will be displayed here.</p>
+        <button onclick="loadReservations()">Load Reservations</button>
+        <ul id="reservation-list"></ul>
+      </div>
+
+      <!-- Pricing Optimization Section -->
+      <div id="pricing" class="card">
+        <h2>Pricing Optimization</h2>
+        <p>Suggested Price: <strong>$120/night</strong></p>
+        <button onclick="acceptPricing()">Accept Suggestion</button>
+      </div>
+
+      <!-- Cleaning Management Section -->
+      <div id="cleaning" class="card">
+        <h2>Cleaning Management</h2>
+        <p>Cleaning tasks will be displayed here after guest check-out.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
