@@ -1,29 +1,28 @@
-// Sample reservations data
-const reservations = [
-  { guestName: 'John Doe', date: '2025-01-15' },
-  { guestName: 'Jane Smith', date: '2025-01-17' },
-  { guestName: 'Alice Brown', date: '2025-01-20' }
-];
-
-// Show the dashboard and hide the intro section
-function showDashboard() {
-  document.getElementById('intro').style.display = 'none';
-  document.getElementById('dashboard').style.display = 'flex';
+// Function to toggle the Register form
+function showRegister() {
+  document.getElementById('login-form').parentElement.style.display = 'none';
+  document.getElementById('register-section').style.display = 'block';
 }
 
-// Load reservations and display them in the list
-function loadReservations() {
-  const reservationList = document.getElementById('reservation-list');
-  reservationList.innerHTML = ''; // Clear the list before adding new items
-
-  reservations.forEach((res) => {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${res.guestName} - ${new Date(res.date).toLocaleDateString()}`;
-    reservationList.appendChild(listItem);
-  });
+// Function to toggle the Log In form
+function showLogin() {
+  document.getElementById('register-section').style.display = 'none';
+  document.getElementById('login-form').parentElement.style.display = 'block';
 }
 
-// Accept pricing suggestion
-function acceptPricing() {
-  alert('You have accepted the suggested price!');
+// Sample form submission handling
+document.getElementById('login-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Logging in...');
+});
+
+document.getElementById('register-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Registering...');
+});
+
+// Simulate redirection to dashboard
+function redirectToDashboard() {
+  alert('Redirecting to dashboard...');
+  // In a real implementation, this would navigate to the dashboard page
 }
