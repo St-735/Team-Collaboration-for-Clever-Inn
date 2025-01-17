@@ -149,4 +149,51 @@ form button:hover {
   border: 1px solid var(--color-primary);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  backgroun
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.auth-form h2 {
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.auth-form button:hover {
+  background-color: var(--color-primary);
+}
+
+.register-invite {
+  margin-top: 1rem;
+  color: var(--color-primary);
+}
+
+.register-invite a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.register-invite a:hover {
+  color: var(--color-primary);
+}
