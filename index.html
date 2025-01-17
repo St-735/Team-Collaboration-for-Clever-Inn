@@ -7,51 +7,104 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Intro Section -->
-  <section id="intro" class="intro-section">
-    <div class="intro-content">
-      <h1>Welcome to Clever Inn</h1>
-      <p>The AI-driven platform that automates and streamlines property management for hosts.</p>
-      <button onclick="showDashboard()">Get Started</button>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Clever Inn</div>
+    <ul>
+      <li><a href="#description">About</a></li>
+      <li><a href="#register-login">Register/Log in</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#company">Company</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Intro Section -->
+  <header class="main-intro">
+    <h1>Welcome to Clever Inn</h1>
+    <p>The AI-powered platform for automated accommodation management.</p>
+    <button onclick="redirectToDashboard()">Get Started</button>
+  </header>
+
+  <!-- Web Description Section -->
+  <section id="description" class="section">
+    <h2>About Clever Inn</h2>
+    <p>Clever Inn automates property management by providing AI-driven reservation handling, price optimization, and communication with guests and cleaning services.</p>
+  </section>
+
+  <!-- Marketing Content -->
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="service-item">
+      <img src="service1.jpg" alt="Reservation Management">
+      <p>Automated Reservation Management</p>
+    </div>
+    <div class="service-item">
+      <img src="service2.jpg" alt="Price Optimization">
+      <p>Dynamic Price Optimization</p>
+    </div>
+    <div class="service-item">
+      <img src="service3.jpg" alt="Communication">
+      <p>Seamless Communication with Guests and Cleaners</p>
     </div>
   </section>
 
-  <!-- Main Dashboard (Hidden by Default) -->
-  <main id="dashboard" class="container" style="display: none;">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <ul>
-        <li><a href="#reservations">Reservations</a></li>
-        <li><a href="#pricing">Pricing Optimization</a></li>
-        <li><a href="#cleaning">Cleaning Management</a></li>
-        <li><a href="#settings">Settings</a></li>
-      </ul>
-    </aside>
+  <!-- Feedback Section -->
+  <section id="feedback" class="section">
+    <h2>User Feedback</h2>
+    <p>We value your feedback! Help us improve by sharing your thoughts.</p>
+    <form id="feedback-form">
+      <input type="text" placeholder="Your ID" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Feedback" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-    <!-- Main Content -->
-    <section class="content">
-      <!-- Reservations Section -->
-      <div id="reservations" class="card">
-        <h2>Reservations</h2>
-        <p>Upcoming reservations will be displayed here.</p>
-        <button onclick="loadReservations()">Load Reservations</button>
-        <ul id="reservation-list"></ul>
+  <!-- Company Section -->
+  <section id="company" class="section">
+    <h2>About Us</h2>
+    <p>Clever Inn is dedicated to making property management easy for hosts by automating tedious tasks.</p>
+  </section>
+
+  <!-- Register / Log In Section -->
+  <section id="register-login" class="auth-section">
+    <div class="auth-container">
+      <!-- Logo -->
+      <div class="logo">
+        <h1>Clever Inn</h1>
       </div>
 
-      <!-- Pricing Optimization Section -->
-      <div id="pricing" class="card">
-        <h2>Pricing Optimization</h2>
-        <p>Suggested Price: <strong>₩100.000night</strong></p>
-        <button onclick="acceptPricing()">Accept Suggestion</button>
-      </div>
+      <!-- Log In Form -->
+      <form id="login-form" class="auth-form">
+        <h2>Log In</h2>
+        <input type="text" placeholder="User ID or Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+      </form>
 
-      <!-- Cleaning Management Section -->
-      <div id="cleaning" class="card">
-        <h2>Cleaning Management</h2>
-        <p>Cleaning tasks will be displayed here after guest check-out.</p>
-      </div>
-    </section>
-  </main>
+      <p class="register-invite">
+        New to Clever Inn? <a href="#register" onclick="showRegister()">Register Here</a>
+      </p>
+
+      <!-- Register Form (Hidden by Default) -->
+      <section id="register-section" class="auth-section" style="display: none;">
+        <div class="auth-container">
+          <h2>Register</h2>
+          <form id="register-form" class="auth-form">
+            <input type="text" placeholder="User ID" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+          </form>
+          <p class="register-invite">
+            Already have an account? <a href="#login" onclick="showLogin()">Log In Here</a>
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
